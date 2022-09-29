@@ -1,0 +1,32 @@
+Source: golang-github-spf13-jwalterweatherman
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Anthony Fok <foka@debian.org>,
+           Tim Potter <tpot@hpe.com>
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper (>= 11),
+               dh-golang,
+               golang-any,
+               golang-github-stretchr-testify-dev
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-spf13-jwalterweatherman
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-spf13-jwalterweatherman.git
+Homepage: https://github.com/spf13/jwalterweatherman
+XS-Go-Import-Path: github.com/spf13/jwalterweatherman
+
+Package: golang-github-spf13-jwalterweatherman-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         golang-github-stretchr-testify-dev
+Description: Go library for both printing to the terminal and logging to files
+ jWalterWeatherman provides seamless printing to the terminal (stdout)
+ and logging to a io.Writer (file) that's as easy to use as fmt.Println.
+ .
+ JWW is primarily a wrapper around the excellent Go standard log library.
+ It provides a few advantages over using the standard log library alone:
+ .
+  * One library for both printing to the terminal and logging (to files).
+  * Allow the user to easily control what levels are printed and logged
+  * No unnecessary initialization cruft.  Just use it.

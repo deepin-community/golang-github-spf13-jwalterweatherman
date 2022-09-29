@@ -1,0 +1,143 @@
+golang-github-spf13-jwalterweatherman (1.1.0+really1.1.0-1) unstable; urgency=medium
+
+  * Revert to upstream version 1.1.0 now that Debian 10 "buster" is released.
+    See https://bugs.debian.org/928227 for background information.
+  * Bump Standards-Version to 4.4.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Thu, 11 Jul 2019 18:19:37 -0600
+
+golang-github-spf13-jwalterweatherman (1.1.0+really1.0.0+git20181028.94f6ae3-1) unstable; urgency=medium
+
+  * Team upload.
+  * Revert all changes between 1.0.0+git20181028.94f6ae3-1 and 1.1.0-1.
+    See https://bugs.debian.org/928227 for a rationale.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 02 Jun 2019 22:15:50 +0200
+
+golang-github-spf13-jwalterweatherman (1.1.0-1) unstable; urgency=medium
+
+  * New upstream version 1.1.0
+  * Bump Standards-Version to 4.3.0 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Apr 2019 03:37:34 -0600
+
+golang-github-spf13-jwalterweatherman (1.0.0+git20181028.94f6ae3-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0+git20181028.94f6ae3, required by hugo (>= 0.50)
+  * Update Maintainer address in debian/control
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 23:44:44 -0700
+
+golang-github-spf13-jwalterweatherman (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0
+  * Add debian/watch
+  * Bump Standards-Version to 4.2.1 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 19 Dec 2018 17:29:19 -0700
+
+golang-github-spf13-jwalterweatherman (0.0~git20180109.7c0cea3-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20180109.7c0cea3
+  * Apply "cme fix dpkg" fixes
+    - Bump Standards-Version from 4.1.1 to 4.1.3
+    - Rename license key from "MIT" to "Expat"
+  * Use debhelper (>= 11)
+  * Bump Standards-Version to 4.1.4 (no change)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 11 Apr 2018 04:18:15 -0600
+
+golang-github-spf13-jwalterweatherman (0.0~git20170901.12bd96e-1) unstable; urgency=medium
+
+  [ Anthony Fok ]
+  * Team upload.
+  * Add "Testsuite: autopkgtest-pkg-go" to debian/control
+
+  [ Dr. Tobias Quathamer ]
+  * New upstream version 0.0~git20170901.12bd96e
+  * Update to Standards-Version 4.1.1
+    - Use Priority: optional
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Fri, 24 Nov 2017 22:03:13 +0100
+
+golang-github-spf13-jwalterweatherman (0.0~git20170523.0.0efa520-1) unstable; urgency=medium
+
+  * New upstream version.
+  * Build-Depends on golang-any instead of golang-go.
+  * Use debhelper (>= 10).
+  * Bump Standards-Version to 4.0.0:
+    Use https form of the copyright-format URL in debian/copyright.
+
+ -- Anthony Fok <foka@debian.org>  Sun, 09 Jul 2017 22:02:22 -0600
+
+golang-github-spf13-jwalterweatherman (0.0~git20170109.0.fa7ca7e.really.git20160311.0.33c24e7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 0.0~git20170109.0.fa7ca7e.really.git20160311.0.33c24e7
+    This is exactly the same tarball as 0.0~git20160311.0.33c24e7. The reversal
+    is necessary because of #858008. The package hugo FTBFS because of the
+    previous upload of this package. However, hugo needs to be rebuilt, because
+    it uses a vulnerable version of golang-go.crypto (CVE-2017-3204,
+    see #859655). As we're currently in the freeze for stretch, the only
+    sensible way is to revert the last upload.
+
+ -- Dr. Tobias Quathamer <toddy@debian.org>  Sun, 16 Apr 2017 15:28:38 +0200
+
+golang-github-spf13-jwalterweatherman (0.0~git20170109.0.fa7ca7e-1) unstable; urgency=medium
+
+  [ Tim Potter ]
+  * Add me to uploaders
+
+  [ Anthony Fok ]
+  * New upstream version 0.0~git20170109.0.fa7ca7e
+
+ -- Anthony Fok <foka@debian.org>  Sun, 05 Mar 2017 22:30:27 -0700
+
+golang-github-spf13-jwalterweatherman (0.0~git20160311.0.33c24e7-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Declare logFlags constants as... const!
+    - Add log counters, see https://github.com/spf13/hugo/issues/740
+    - Call initialize after changing logFlags
+  * Update debian/control:
+    - Bump Standards-Version to 3.9.8 (no change)
+    - Remove unnecessary architecture specification from Build-Depends
+    - Use secure https URL for Vcs-Git too
+
+ -- Anthony Fok <foka@debian.org>  Fri, 29 Apr 2016 03:52:57 +0800
+
+golang-github-spf13-jwalterweatherman (0.0~git20151231.0.d006540-2) unstable; urgency=medium
+
+  * Allow the use of gccgo on architectures without golang-go
+
+ -- Anthony Fok <foka@debian.org>  Thu, 14 Jan 2016 04:05:01 -0700
+
+golang-github-spf13-jwalterweatherman (0.0~git20151231.0.d006540-1) unstable; urgency=medium
+
+  * New upstream version:
+    - Output caller's file name and line at FEEDBACK
+    - Added Log FLag set API
+    - Restored the original jww_test file
+
+ -- Anthony Fok <foka@debian.org>  Fri, 01 Jan 2016 03:07:26 -0700
+
+golang-github-spf13-jwalterweatherman (0.0~git20151106.0.c2aa07d-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20151106.0.c2aa07d
+  * Update debian/control
+     - Remove obsolete alternative Build-Depends/Depends on
+       golang-testify-dev
+     - Remove Built-Using field for this Go library package
+       without binary executable
+
+ -- Anthony Fok <foka@debian.org>  Sat, 28 Nov 2015 22:30:13 -0700
+
+golang-github-spf13-jwalterweatherman (0.0~git20141219.0.3d60171-1) unstable; urgency=medium
+
+  * Initial release (Closes: #798328)
+
+ -- Anthony Fok <foka@debian.org>  Tue, 08 Sep 2015 01:25:23 -0600
